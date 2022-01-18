@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap');
+
+:root {
+    --black-700: #1a1a1a;
+    --blueberry-300: #64baff;
+    --blueberry-500: #3689e6;
+    --blueberry-700: #0d52bf;
+    --silver-100: #fafafa;
+
+    --font-family: "Inter", system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+[data-theme=light],
+:root:not([data-theme=dark]) {
+    color-scheme: light;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme=light]) {
+        color-scheme: dark;
+        --background-color: var(--black-700);
+        --color: #fafafa;
+        --primary: var(--blueberry-500);
+        --primary-focus: var(--blueberry-700);
+        --primary-hover: var(--blueberry-300);
+    }
+}
+
+[data-theme=dark] {
+    color-scheme: dark;
+    --background-color: var(--black-700);
+    --color: #fafafa;
+    --primary: var(--blueberry-500);
+    --primary-focus: var(--blueberry-700);
+    --primary-hover: var(--blueberry-300);
+}

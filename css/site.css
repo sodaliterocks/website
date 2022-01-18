@@ -1,0 +1,68 @@
+@import url("/css/theme.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing);
+    margin-top: 0 !important;
+}
+
+header h1,
+header p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70ch;
+    text-align: center;
+}
+
+header .container h1 + p {
+    margin-top: calc(var(--spacing) * -1);
+}
+
+hgroup:after {
+    display: block;
+    max-width: 100px;
+    margin-top: 1rem;
+    border-bottom: .125rem solid var(--primary);
+    content: "";
+}
+
+main > section {
+    padding: var(--block-spacing-vertical);
+}
+
+nav ul:first-of-type {
+    margin-left: calc(var(--spacing) * -.5);
+}
+
+nav .nav-logo {
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+    nav .nav-logo a {
+        margin-left: calc(var(--spacing) * -1);
+    }
+
+        nav .nav-logo a img {
+            height: 48px;
+            width: 48px;
+        }
+
+[role=button],
+button,
+input[type=button], input[type=reset], input[type=submit] {
+    border: 1px solid rgba(0,0,0,.2);
+    padding:
+        var(--form-element-spacing-vertical)
+        calc(var(--form-element-spacing-horizontal) * 1.5);
+    text-shadow: 0 1px rgb(0 0 0 / 30%);
+}
+
+#install {
+    background-color: var(--background-color);
+}
