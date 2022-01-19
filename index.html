@@ -6,45 +6,49 @@
     <link rel="dns-prefetch" href="https://unpkg.com/" >
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <link rel="stylesheet" href="/css/site.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Sodalite</title>
 </head>
-<body>
-    <nav class="container-fluid">
-        <ul>
-            <li class="nav-logo">
-                <a href="/">
-                    <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/logo/logo_small.svg" />
-                </a>
-            </li>
-            <li>
-                <a href="#install" class="secondary">Install</a>
-            </li>
-            <li>
-                <a href="#explore" class="secondary">Explore</a>
-            </li>
-            <li>
-                <a href="#develop" class="secondary">Develop</a>
-            </li>
-            <li>
-                <a href="#support" class="secondary">Support</a>
-            </li>
-        </ul>
-        <ul>
+<body data-theme="dark">
+    <header data-theme="dark">
+        <div class="background">
+            <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/wallpapers/karsten-wurth-7BjhtdogU3A-unsplash.jpg" />
+        </div>
+        <nav class="container-fluid">
+            <ul>
+                <li class="nav-logo">
+                    <a href="/">
+                        <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/logo/logo_small.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#install" class="contrast">Install</a>
+                </li>
+                <li>
+                    <a href="#explore" class="contrast">Explore</a>
+                </li>
+                <li>
+                    <a href="#develop" class="contrast">Develop</a>
+                </li>
+                <li>
+                    <a href="#support" class="contrast">Support</a>
+                </li>
+            </ul>
+            <ul>
 
-        </ul>
-    </nav>
-    <header>
+            </ul>
+        </nav>
         <div class="container">
             <p>
                 <span class="laptop">
                     <span class="screenshot">
-                        <img src="https://placekitten.com/1920/1080" />
+                        <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/screenshots/screenshot_desktop.png" />
                     </span>
                     <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/laptop/laptop.svg" />
                 </span>
             </p>
             <h1>Immutable. Beautiful.</h1>
-            <p>Combining the power of <a href="https://silverblue.fedoraproject.org"><strong>Fedora Silverblue</strong></a> and simplicity of <a href="https://elementary.io/open-source"><strong>Pantheon</strong></a>; an OS built for developers and hobbyists, providing an insanely stable platform and a charming desktop.</p>
+            <p>Combining the power of <a href="https://silverblue.fedoraproject.org">Fedora Silverblue</a> and simplicity of <a href="https://elementary.io/open-source">Pantheon</a>; an OS built for developers and hobbyists, providing an insanely stable platform and a charming desktop.</p>
             <p>
                 <a href="#install" role="button">Get Started</a>
             </p>
@@ -57,6 +61,53 @@
                     <h2>Install</h2>
                     <h3>One small step.</h3>
                 </hgroup>
+                <div class="alert">
+                    <p>
+                        <strong>This is still a work-in-progress, and there are many things that don't work!</strong>
+                    </p>
+                    <p>
+                        Pantheon is a <em>mostly</em> distro-agnostic, and work by many talented people over the years has made using the desktop outside of elementaryOS possible, but its some way from being complete. Some built-in apps and settings items may not work properly, and entirely broken features have been removed. However, it is usable for day-to-day activities and every effort has been make sure the OS is stable and safe.
+                    </p>
+                    <p>
+                        See <a href="https://github.com/sodaliterocks/sodalite/tree/main#status">sodaliterocks/sodalite &#10132; Status</a> for more information.
+                    </p>
+                </div>
+                <ol>
+                    <li>
+                        Install an OSTree version of Fedora, such as <a href="https://silverblue.fedoraproject.org/">Fedora Silverblue</a>.
+                    </li>
+                    <li>
+                        Open a terminal and issue these commands:
+                        <ul>
+                            <li>
+                                <code>sudo ostree remote add --if-not-exists sodalite https://ostree.sodalite.rocks --no-gpg-verify</code>
+                            </li>
+                            <li>
+                                <code>sudo ostree pull sodalite:sodalite/stable/x86_64/stable</code>
+                            </li>
+                            <li>
+                                <code>sudo rpm-ostree rebase sodalite:sodalite/stable/x86_64/stable</code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Stick the kettle on and make yourself a cuppa. It'll take a while.
+                    </li>
+                    <li>
+                        Reboot when prompted. Sit back in awe as the desktop loads up.
+                        <ul>
+                            <li>
+                                Updates will occur automatically if you update everything from <strong>Software</strong> (which runs in the background by default and sends desktops notifications).
+                            </li>
+                            <li>
+                                As they are installed via Flatpak, various GNOME apps will still be lingering. Remove these with <code>sudo sodalite-uninstall-gnome-apps</code>.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>
+                    Need more help? See <a href="https://github.com/sodaliterocks/sodalite/tree/main#getting">sodaliterocks/sodalite &#10132; Getting</a>.
+                </p>
             </div>
         </section>
         <section id="explore">
@@ -65,6 +116,7 @@
                     <h2>Explore</h2>
                     <h3>Take a peek.</h3>
                 </hgroup>
+                <p><em>Coming soon!</em></p>
             </div>
         </section>
         <section id="develop">
@@ -73,16 +125,27 @@
                     <h2>Develop</h2>
                     <h3>Free as in free speech.</h3>
                 </hgroup>
+                <p><em>Coming soon!</em></p>
             </div>
         </section>
         <section id="support">
             <div class="container">
                 <hgroup>
                     <h2>Support</h2>
-                    <h3>...</h3>
+                    <h3>It's dead, Jim!</h3>
                 </hgroup>
+                <p><em>Coming soon!</em></p>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>Built by <a href="https://github.com/electricduck">Ducky</a></li>
+                <li>Licensed as <a href="https://github.com/sodaliterocks/website/blob/main/LICENSE">MIT</a></li>
+                <li>Powered by <a href="https://picocss.com/">PicoCSS</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
