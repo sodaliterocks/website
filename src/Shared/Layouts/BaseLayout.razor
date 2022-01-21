@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager _navigationManager
+
+<SWNav>
+    <SWNavLink Href="/">Explore</SWNavLink>
+    <SWNavLink Href="/install">Install</SWNavLink>
+    <SWNavLink Href="/support">Support</SWNavLink>
+    <SWNavLink Href="/develop">Develop</SWNavLink>
+</SWNav>
+
+@Body
+
+<SWFooter>
+</SWFooter>
+
+@code {
+    protected override void OnInitialized()
+    {
+        string currentPath = _navigationManager.ToBaseRelativePath(_navigationManager.Uri);
+        base.OnInitialized();
+    }
+}

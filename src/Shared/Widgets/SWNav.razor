@@ -1,0 +1,17 @@
+<nav class="container-fluid">
+    <ul>
+        <li class="logo">
+            <a href="/">
+                <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/logo/logo_small.svg" />
+            </a>
+        </li>
+        @ChildContent
+    </ul>
+    <ul>
+
+    </ul>
+</nav>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

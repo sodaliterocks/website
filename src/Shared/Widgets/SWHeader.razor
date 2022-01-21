@@ -1,0 +1,14 @@
+<header data-theme="dark" class=@($"{(UnifyNav ? "unify-nav" : "")}")>
+    <div class="background">
+        @HeaderBackground
+    </div>
+    <div class="container">
+        @HeaderContent
+    </div>
+</header>
+
+@code {
+    [Parameter] public RenderFragment HeaderBackground { get; set; }
+    [Parameter] public RenderFragment HeaderContent { get; set; }
+    [Parameter] public bool UnifyNav { get; set; } = true;
+}

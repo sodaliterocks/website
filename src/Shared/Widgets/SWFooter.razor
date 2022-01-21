@@ -1,0 +1,20 @@
+<footer>
+    <div class="container">
+        @ChildContent
+        <ul>
+            <li>&copy; @CopyrightYear <a href="https://github.com/sodaliterocks">Sodalite</a> contributors</li>
+        </ul>
+    </div>
+</footer>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    
+    private string CopyrightYear { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        CopyrightYear = DateTime.Now.Year.ToString();
+        base.OnInitialized();
+    }
+}

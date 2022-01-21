@@ -1,0 +1,10 @@
+<li>
+    <a href="@Href" class="contrast">
+        @ChildContent
+    </a>
+</li>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public string Href { get; set; }
+}

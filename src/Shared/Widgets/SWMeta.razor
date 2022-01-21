@@ -1,0 +1,17 @@
+<PageTitle>@Title</PageTitle>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public string Title { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if(Title == null || Title == "Explore" || Title == "Home") {
+            Title = "Sodalite";
+        } else {
+            Title = $"{Title} | Sodalite";
+        }
+
+        base.OnInitialized();
+    }
+}

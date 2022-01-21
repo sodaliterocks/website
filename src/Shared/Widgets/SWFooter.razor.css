@@ -1,0 +1,26 @@
+footer {
+    background-color: var(--bubblegum-700);
+}
+
+    footer ::deep ul {
+        font-size: 0;
+        text-align: center;
+    }
+
+    footer ::deep ul,
+    footer ::deep ul li {
+        margin-bottom: 0;
+        padding: 0;
+        color: var(--silver-100);
+        list-style: none;
+    }
+
+    footer ::deep li {
+        display: inline-block;
+        font-size: 0.875rem;
+    }
+
+        footer ::deep li:not(:first-child)::before {
+            margin: 0 .25rem;
+            content: "|";
+        }

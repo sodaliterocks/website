@@ -1,0 +1,45 @@
+nav {
+    min-height: var(--nav-height);
+    max-height: var(--nav-height);
+}
+
+nav,
+nav ::deep li {
+    z-index: 100;
+}
+
+    nav ul:first-of-type {
+        margin-left: calc(var(--spacing) * -.5);
+    }
+
+    nav .logo {
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+
+        nav .logo a {
+            margin-left: calc(var(--spacing) * -1);
+        }
+
+            nav .logo a img {
+                height: 48px;
+                width: 48px;
+            }
+
+nav ::deep + header.unify-nav,
+nav ::deep + main {
+    margin-top: calc(var(--nav-height) * -1);
+}
+
+
+@media (max-width: 768px) {
+    nav ::deep + main > section:first-of-type {
+        margin-top: var(--nav-height);
+    }
+}
+
+@media (max-width: 1200px) {
+    nav ::deep + header.unify-nav > .container {
+        margin-top: var(--nav-height);
+    }
+}
