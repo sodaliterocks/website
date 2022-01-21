@@ -1,0 +1,22 @@
+<div class="grid-item">
+    <div class="cover">
+        <SWBackgroundStack>
+            <BackgroundStackBackground>
+                @GridItemCover
+            </BackgroundStackBackground>
+            <BackgroundStackContent>
+                @GridItemHeader
+            </BackgroundStackContent>
+        </SWBackgroundStack>
+    </div>
+    <div class="content">
+        @GridItemContent
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment GridItemContent { get; set; }
+    [Parameter] public RenderFragment GridItemCover { get; set; }
+    [Parameter] public RenderFragment GridItemFooter { get; set; }
+    [Parameter] public RenderFragment GridItemHeader { get; set; }
+}

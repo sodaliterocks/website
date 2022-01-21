@@ -2,16 +2,16 @@
     <section id="error" data-theme="dark">
         <div class="container">
             <hgroup>
-                <h2>@Title</h2>
-                <h3>@Subtitle</h3>
+                <h2>@ErrorTitle</h2>
+                <h3>@ErrorSubtitle</h3>
             </hgroup>
-            @ChildContent
+            @ErrorBody
         </div>
     </section>
 </main>
 
 @code {
-    [Parameter] public RenderFragment ChildContent { get; set; }
-    [Parameter] public string Title { get; set; }
-    [Parameter] public string Subtitle { get; set; }
+    [Parameter] public RenderFragment ErrorBody { get; set; }
+    [Parameter] public RenderFragment ErrorSubtitle { get; set; }
+    [Parameter] public RenderFragment ErrorTitle { get; set; }
 }

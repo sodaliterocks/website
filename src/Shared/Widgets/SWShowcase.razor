@@ -1,0 +1,14 @@
+<div class=@($"showcase {(ImageOnRight ? "image-right" : "image-left")}")>
+    <div class="image">
+        @ShowcaseImage
+    </div>
+    <div class="content">
+        @ShowcaseContent
+    </div>
+</div>
+
+@code {
+    [Parameter] public bool ImageOnRight { get; set; } = false;
+    [Parameter] public RenderFragment ShowcaseContent { get; set; }
+    [Parameter] public RenderFragment ShowcaseImage { get; set; }
+}

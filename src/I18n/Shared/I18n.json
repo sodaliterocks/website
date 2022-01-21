@@ -1,0 +1,17 @@
+{
+    "DevelopPage.Title": "Develop",
+    "Error.ComingSoon.Body": "This project, and be extension, website, is still in its fairly early days.",
+    "Error.ComingSoon.Body.DevelopPage": "The <strong>Develop</strong> page will detail what each of our open-source components do and how to get involved. For now, you can visit our <a href=\"https://github.com/sodaliterocks\">GitHub organization</a>.",
+    "Error.ComingSoon.Subtitle": "Not quite there yet.",
+    "Error.ComingSoon.Title": "Coming Soon",
+    "Error.NotFound.Subtitle": "Just like Jimmy Hoffa",
+    "Error.NotFound.Title": "Not Found",
+    "ExplorePage.Header.Description": "Combining the power of [0] and simplicity of [1]; an OS built for developers and hobbyists, providing an insanely stable platform and a charming desktop.",
+    "ExplorePage.Header.GoInstall": "Get Started",
+    "ExplorePage.Header.Tagline": "Immutable. Beautiful.",
+    "ExplorePage.Title": "Explore",
+    "FooterWidget.Attribution": "&copy; [0] [1] contributors",
+    "InstallPage.Header.Subtitle": "Setting it up is easy. Deciding what to do with it is the hard part.",
+    "InstallPage.Title": "Install",
+    "SupportPage.Title": "Support"
+}

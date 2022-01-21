@@ -7,9 +7,13 @@
         <LayoutView Layout="@typeof(BaseLayout)">
             <SWMeta
                 Title="Not Found" />
-            <SWError
-                Title="Not Found"
-                Subtitle="Just like Jimmy Hoffa">
+            <SWError>
+                <ErrorTitle>
+                    <I18n Key="Error.NotFound.Title" />
+                </ErrorTitle>
+                <ErrorSubtitle>
+                    <I18n Key="Error.NotFound.Subtitle" />
+                </ErrorSubtitle>
             </SWError>
         </LayoutView>
     </NotFound>

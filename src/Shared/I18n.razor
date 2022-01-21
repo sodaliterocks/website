@@ -1,0 +1,47 @@
+@((MarkupString)Translation)
+
+@code {
+    [Inject] private IStringLocalizer<I18n> _stringLocalizer { get; set; }
+    [Parameter] public string Key { get; set; }
+    [Parameter] public string[] Replacements { get; set; }
+    
+    public string MissingTranslationString { get; set; } = "(?)";
+
+    private string Translation { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        if(Key == null) {
+            Translation = MissingTranslationString;
+        } else {
+            var translation = GetTranslation(Key, Replacements);
+
+            if(translation == Key) {
+                Translation = MissingTranslationString;
+            } else {
+                Translation = translation;
+            }
+        }
+        
+        base.OnInitialized();
+    }
+
+    public string GetTranslation(
+        string key,
+        string[] replacements = null
+    ) {
+        string translation = _stringLocalizer[key];
+
+        if(replacements != null) {
+            int replacementIndex = 0;
+
+            foreach(var replacement in replacements) {
+                translation = translation
+                    .Replace($"[{replacementIndex}]", replacements[replacementIndex]);
+                replacementIndex++;
+            }
+        }
+
+        return translation;
+    }
+}

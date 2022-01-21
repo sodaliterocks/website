@@ -1,0 +1,27 @@
+#design {
+    background-color: var(--bubblegum-700);
+}
+
+#explore ::deep .showcase > .content h4:first-child {
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    margin-bottom: 0 !important;
+    text-transform: lowercase;
+}
+
+#explore ::deep .showcase > .content p {
+    font-size: calc(var(--font-size) / 1.25);
+}
+
+#explore ::deep .showcase > .content p,
+#explore ::deep .showcase > .content h1,
+#explore ::deep .showcase > .content h4 {
+    margin-bottom: calc(var(--typography-spacing-vertical) / 2);
+}
+
+@media (min-width: 1200px) {
+    main #explore > .container {
+        padding: 0 var(--block-spacing-vertical);
+        max-width: 1700px;
+    }
+}

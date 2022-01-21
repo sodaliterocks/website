@@ -1,13 +1,34 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Localization;
+using SoloX.BlazorJsonLocalization;
+using System.Globalization;
 using SodaliteWeb.Data;
+
+var supportedCultures = new List<CultureInfo>
+{
+    new CultureInfo("de"),    // German
+    new CultureInfo("en"),    // English
+    new CultureInfo("en-GB"), // English (United Kingdom)
+    new CultureInfo("fr"),    // French
+    new CultureInfo("pt")     // Portuguese
+};
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+builder.Services.AddJsonLocalization(
+    builder => builder.UseEmbeddedJson(
+        options => options.ResourcesPath = "I18n"),
+        ServiceLifetime.Singleton);
+
+builder.Services.Configure<RequestLocalizationOptions>(options => {
+    options.DefaultRequestCulture = new RequestCulture("en");
+    options.SupportedUICultures = supportedCultures;
+});
 
 var app = builder.Build();
 
@@ -20,10 +41,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseStaticFiles();
-
+app.UseRequestLocalization();
 app.UseRouting();
+app.UseStaticFiles();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");

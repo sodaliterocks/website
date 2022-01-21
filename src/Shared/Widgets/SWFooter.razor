@@ -2,7 +2,14 @@
     <div class="container">
         @ChildContent
         <ul>
-            <li>&copy; @CopyrightYear <a href="https://github.com/sodaliterocks">Sodalite</a> contributors</li>
+            <li>
+                <I18n
+                    Key="FooterWidget.Attribution"
+                    Replacements=@(new string[] { 
+                        CopyrightYear,
+                        "<a href=\"https://github.com/sodaliterocks\">Sodalite</a>"
+                    }) />
+            </li>
         </ul>
     </div>
 </footer>

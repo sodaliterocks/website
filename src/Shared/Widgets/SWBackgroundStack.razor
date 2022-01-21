@@ -1,0 +1,13 @@
+<div class="background-stack">
+    <div class="background">
+        @BackgroundStackBackground
+    </div>
+    <div class="content">
+        @BackgroundStackContent
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment BackgroundStackBackground { get; set; }
+    [Parameter] public RenderFragment BackgroundStackContent { get; set; }
+}

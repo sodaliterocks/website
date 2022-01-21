@@ -31,15 +31,13 @@ nav ::deep + main {
     margin-top: calc(var(--nav-height) * -1);
 }
 
+    nav ::deep + header.unify-nav .content {
+        margin-top: calc(var(--nav-height) * 0.5);
+    }
+
 
 @media (max-width: 768px) {
     nav ::deep + main > section:first-of-type {
-        margin-top: var(--nav-height);
-    }
-}
-
-@media (max-width: 1200px) {
-    nav ::deep + header.unify-nav > .container {
         margin-top: var(--nav-height);
     }
 }

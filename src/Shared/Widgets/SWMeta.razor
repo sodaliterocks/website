@@ -1,14 +1,25 @@
 <PageTitle>@Title</PageTitle>
 
 @code {
+    [Inject] private NavigationManager _navigationManager { get; set; }
+
     [Parameter] public RenderFragment ChildContent { get; set; }
     [Parameter] public string Title { get; set; }
 
     protected override void OnInitialized()
     {
-        if(Title == null || Title == "Explore" || Title == "Home") {
+        string currentPath = _navigationManager.ToBaseRelativePath(_navigationManager.Uri);
+
+        if(Title == null || currentPath == "") {
             Title = "Sodalite";
         } else {
+            /*Shared.I18n _i18n = new Shared.I18n();
+            string translatedTitle = _i18n.GetTranslation(Title);
+
+            if(translatedTitle != _i18n.MissingTranslationString) {
+                Title = translatedTitle;
+            }*/
+
             Title = $"{Title} | Sodalite";
         }
 

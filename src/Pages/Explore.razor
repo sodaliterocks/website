@@ -13,21 +13,86 @@
                 <img src="https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/screenshots/screenshot_desktop.png" />
             </SWLaptop>
         </p>
-        <h1>Immutable. Beautiful.</h1>
-        <p>Combining the power of <a href="https://silverblue.fedoraproject.org">Fedora Silverblue</a> and simplicity of <a href="https://elementary.io/open-source">Pantheon</a>; an OS built for developers and hobbyists, providing an insanely stable platform and a charming desktop.</p>
+        <h1>
+            <I18n
+                Key="ExplorePage.Header.Tagline" />
+        </h1>
         <p>
-            <a href="/install" role="button">Get Started</a>
+            <I18n
+                Key="ExplorePage.Header.Description"
+                Replacements=@(new string[] { 
+                    "<a href=\"https://silverblue.fedoraproject.org\">Fedora Silverblue</a>",
+                    "<a href=\"https://elementary.io/open-source\">Pantheon</a>"
+                }) />
+        </p>
+        <p>
+            <a href="/install" role="button">
+                <I18n
+                    Key="ExplorePage.Header.GoInstall" />
+            </a>
         </p>
     </HeaderContent>
 </SWHeader>
 
 <main>
-    <div class="container">
-        <section id="explore" data-theme="dark">
-            <hgroup>
-                <h2>Explore</h2>
-                <h3>Take a peek.</h3>
-            </hgroup>
-        </section>
-    </div>
+    <section id="explore">
+        <div class="container">
+            <SWShowcase>
+                <ShowcaseContent>
+                    <h4>Rock-solid base</h4>
+                    <h1>Fedora Silverblue</h1>
+                    <p>
+                        ...
+                    </p>
+                    <p>
+                        <code>rpm-ostree</code> is at the heart of every Fedora OSTree spin, utilizing <code>libostree</code> and <code>libdnf</code> to provide a hybrid image/package system. Along with handling OS updates, it also lets you install things <em>the old fashioned-way</em> and will happily accept your RPMs.
+                    </p>
+                    <p>
+                        <a href="https://silverblue.fedoraproject.org">Learn More &raquo;</a>
+                    </p>
+                </ShowcaseContent>
+                <ShowcaseImage>
+                    <img src="http://placekitten.com/500/500" />
+                </ShowcaseImage>
+            </SWShowcase>
+            <SWShowcase ImageOnRight=true>
+                <ShowcaseContent>
+                    <h4>Hand-crafted desktop</h4>
+                    <h1>Pantheon</h1>
+                    <p>
+                        ...
+                    </p>
+                    <p>
+                        <a href="https://elementary.io/open-source">Learn More &raquo;</a>
+                    </p>
+                </ShowcaseContent>
+                <ShowcaseImage>
+                    <img src="http://placekitten.com/500/500" />
+                </ShowcaseImage>
+            </SWShowcase>
+            <SWShowcase>
+                <ShowcaseContent>
+                    <h4>Boxed applications</h4>
+                    <h1>Flatpak</h1>
+                    <p>
+                        ...
+                    </p>
+                    <p>
+                        <a href="https://www.flatpak.org/">Learn More &raquo;</a>
+                    </p>
+                </ShowcaseContent>
+                <ShowcaseImage>
+                    <img src="http://placekitten.com/500/500" />
+                </ShowcaseImage>
+            </SWShowcase>
+        </div>
+    </section>
+    <section id="design">
+
+    </section>
+    <section id="download">
+        <div class="container">
+
+        </div>
+    </section>
 </main>

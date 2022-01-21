@@ -1,0 +1,8 @@
+<div class=@($"grid {ExtraClass}")>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter] public string ExtraClass { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

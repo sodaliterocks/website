@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SoloX.BlazorJsonLocalization" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="I18n/Shared/I18n-de.json" />
+    <EmbeddedResource Include="I18n/Shared/I18n-en-GB.json" />
+    <EmbeddedResource Include="I18n/Shared/I18n-fr.json" />
+    <EmbeddedResource Include="I18n/Shared/I18n-pt.json" />
+    <EmbeddedResource Include="I18n/Shared/I18n.json" />
+  </ItemGroup>
+
 </Project>
