@@ -1,0 +1,81 @@
+@page "/wallpaper"
+
+<SWMeta
+    Title="Wallpaper" />
+
+<main>
+    <section id="kitty">
+        <SWBackgroundStack Brightness=0.75>
+            <BackgroundStackBackground>
+                <img src=@WallpaperUrl />
+            </BackgroundStackBackground>
+            <BackgroundStackContent>
+                <div class="container">
+                    <p>
+                        <I18n
+                            Key="WallpaperPage.Text"
+                            Replacements=@(new string[] { 
+                                WallpaperAttribution
+                            }) />
+                    </p>
+                </div>
+            </BackgroundStackContent>
+        </SWBackgroundStack>
+    </section>
+</main>
+
+@code {
+    private string WallpaperAttribution { get; set; }
+    private string WallpaperUrl { get; set; }
+
+    class WallpaperEntity {
+        public string Author { get; set; }
+        public string Filename { get; set; }
+        public string Source { get; set; }
+
+        public WallpaperEntity(
+            string filename,
+            string author,
+            string source
+        ) {
+            Author = author;
+            Filename = filename;
+            Source = source;
+        }
+    }
+
+    // BUG: Wallpaper getting set twice
+    protected override void OnParametersSet()
+    {
+        WallpaperEntity wallpaper = GetRandomWallpaper();
+
+        if(String.IsNullOrEmpty(wallpaper.Source)) {
+            WallpaperAttribution = $"{wallpaper.Author}";
+        } else {
+            WallpaperAttribution = $"<a href=\"{wallpaper.Source}\">{wallpaper.Author}</a>";
+        }
+
+        WallpaperUrl = $"https://git.zio.sh/sodaliterocks/lfs/raw/branch/main/wallpapers/{wallpaper.Filename}";
+    }
+
+    private WallpaperEntity GetRandomWallpaper()
+    {
+        WallpaperEntity[] wallpapers = new WallpaperEntity[] {
+            new WallpaperEntity("adrien-olichon-gXqgs6Smvw-unsplash.jpg", "Adrien Olichon", "https://unsplash.com/@adrienolichon"),
+            new WallpaperEntity("austin-neill-AGPGx6Yr9NI-unsplash.jpg", "Austin Neill", "https://unsplash.com/@arstyy"),
+            new WallpaperEntity("cody-fitzgerald-iUBG6hQe4N0-unsplash.jpg", "Cody Fitzgerald", "https://unsplash.com/@cfitz"),
+            new WallpaperEntity("dustin-humes-OrO_HSqlZMY-unsplash.jpg", "Dustin Humes", "https://unsplash.com/@dustinhumes_photography"),
+            new WallpaperEntity("jack-b-vcNPMwS08UI-unsplash.jpg", "Jack B.", "https://unsplash.com/@nervum"),
+            new WallpaperEntity("karsten-wurth-7BjhtdogU3A-unsplash.jpg", "Karsten Würth", "https://unsplash.com/@karsten_wuerth"),
+            new WallpaperEntity("max-okhrimenko-R-CoXmMrWFk-unsplash.jpg", "Max Okhrimenko", "https://unsplash.com/@maxokhrimenko"),
+            new WallpaperEntity("nathan-dumlao-y_qtd7IizFE-unsplash.jpg", "Nathan Dumlao", "https://unsplash.com/@nate_dumlao"),
+            new WallpaperEntity("ryan-stone-U3cctUBucn0-unsplash.jpg", "Ryan Stone", "https://unsplash.com/@rstone_design"),
+            new WallpaperEntity("smaran-alva-hno1wDtV1X4-unsplash.jpg", "Smaran Alva", "https://unsplash.com/@smal"),
+            new WallpaperEntity("william-daigneault-7c8z4KEvgds-unsplash.jpg", "William Daigneault", "https://unsplash.com/@williamdaigneault"),
+            new WallpaperEntity("zara-walker-_pC5hT6aXfs-unsplash.jpg", "Zara Walker", "https://unsplash.com/@mojoblogs")
+        };
+        WallpaperEntity chosen = wallpapers.OrderBy(n => Guid.NewGuid()).ToArray().FirstOrDefault();
+        
+        return chosen;
+    }
+}

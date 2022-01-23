@@ -1,0 +1,27 @@
+main {
+    padding: 0;
+}
+
+#kitty {
+    height: 100vh;
+    margin-top: 0 !important;
+    padding: 0;
+}
+
+    #kitty ::deep > .background-stack {
+        height: 100%;
+    }
+
+        #kitty ::deep > .background-stack > .content {
+            bottom: calc(var(--spacing) * 2);
+            font-size: 1rem;
+            height: unset;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+            #kitty ::deep > .background-stack > .content a {
+                color: inherit;
+                text-decoration: underline;
+            }

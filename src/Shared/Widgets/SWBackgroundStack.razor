@@ -1,5 +1,5 @@
 <div class="background-stack">
-    <div class="background">
+    <div class="background" style=@($"filter: brightness({Brightness.ToString()});")>
         @BackgroundStackBackground
     </div>
     <div class="content">
@@ -10,4 +10,5 @@
 @code {
     [Parameter] public RenderFragment BackgroundStackBackground { get; set; }
     [Parameter] public RenderFragment BackgroundStackContent { get; set; }
+    [Parameter] public double Brightness { get; set; } = 0.25;
 }

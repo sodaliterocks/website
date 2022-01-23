@@ -1,16 +1,3 @@
 {
-    "DevelopPage.Title": "Entwickeln",
-    "Error.ComingSoon.Body": "Dieses Projekt und die Erweiterung, Website ist noch in den frühen Tagen.",
-    "Error.ComingSoon.Subtitle": "Noch nicht ganz da.",
-    "Error.ComingSoon.Title": "Kommt bald",
-    "Error.NotFound.Subtitle": "Genau wie Jimmy Hoffa",
-    "Error.NotFound.Title": "Nicht gefunden",
-    "ExplorePage.Header.Description": "Kombination der Leistung von [0] und der Einfachheit von [1]; Ein Betriebssystem, das für Entwickler und Hobbyisten gebaut wurde und eine wahnsinnig stabile Plattform und einen charmanten Desktop bietet.",
-    "ExplorePage.Header.GoInstall": "Sich aufmachen",
-    "ExplorePage.Header.Tagline": "Unveränderlich. Wunderschön.",
-    "ExplorePage.Title": "Erforschen",
-    "FooterWidget.Attribution": "&copy; [0] [1]-Mitwirkende",
-    "InstallPage.Header.Subtitle": "Das Einstellen ist einfach. Entscheidend, was mit ihm zu tun ist, ist der harte Teil.",
-    "InstallPage.Title": "Installieren",
-    "SupportPage.Title": "Unterstützen"
+    "WallpaperPage.Text": "Dieses Hintergrundbild wurde von <strong>[0]</strong> erstellt und ist nur eines der vielen schönen Hintergrundbilder, die in <strong>Sodalite</strong> enthalten sind"
 }

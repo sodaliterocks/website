@@ -1,26 +1,30 @@
 footer {
-    background-color: var(--bubblegum-700);
+    background-color: var(--slate-700);
 }
 
-    footer ::deep ul {
+    footer ul {
         font-size: 0;
         text-align: center;
     }
 
-    footer ::deep ul,
-    footer ::deep ul li {
-        margin-bottom: 0;
+        footer ul:last-child {
+            margin-bottom: 0;
+        }
+
+    footer ul,
+    footer li {
         padding: 0;
         color: var(--silver-100);
         list-style: none;
     }
 
-    footer ::deep li {
+    footer li {
         display: inline-block;
-        font-size: 0.875rem;
+        font-size: calc(var(--font-size) / 1.25);
+        margin-bottom: 0;
     }
 
-        footer ::deep li:not(:first-child)::before {
+        footer li:not(:first-child)::before {
             margin: 0 .25rem;
             content: "|";
         }

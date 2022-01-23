@@ -1,6 +1,11 @@
 #design {
-    background-color: var(--bubblegum-700);
+    box-shadow: 0 0 35px rgba(0 0 0 / 30%);
+    padding: 0;
 }
+
+    #design ::deep > .background-stack > .content {
+        padding: var(--block-spacing-vertical);
+    }
 
 #explore ::deep .showcase > .content h4:first-child {
     font-variant: small-caps;
@@ -19,9 +24,38 @@
     margin-bottom: calc(var(--typography-spacing-vertical) / 2);
 }
 
+@media (min-width: 992px) {
+    main #explore > .container {
+        --container-width: 992px;
+        --showcase-image-offset: 100px;
+
+        padding: 0 var(--block-spacing-vertical);
+        max-width: var(--container-width);
+    }
+
+    main #explore ::deep .showcase > .image {
+        width: calc((var(--container-width) - var(--showcase-image-offset)) / 2);
+    }
+
+        main #explore ::deep .showcase.image-right > .image img {
+            margin-left: unset;
+        }
+
+        main #explore ::deep .showcase > .image img {
+            margin-left: -100%;
+            max-width: unset;
+            width: calc(var(--container-width) - var(--showcase-image-offset));
+        }
+}
+
 @media (min-width: 1200px) {
     main #explore > .container {
-        padding: 0 var(--block-spacing-vertical);
-        max-width: 1700px;
+        --container-width: 1200px;
+    }
+}
+
+@media (min-width: 1700px) {
+    main #explore > .container {
+        --container-width: 1700px;
     }
 }

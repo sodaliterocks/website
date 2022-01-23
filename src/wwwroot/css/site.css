@@ -3,11 +3,14 @@
 
 :root {
     --black-700: #1a1a1a;
+    --blueberry-100: #8cd5ff;
     --blueberry-300: #64baff;
     --blueberry-500: #3689e6;
     --blueberry-700: #0d52bf;
     --bubblegum-700: #bc245d;
     --silver-100: #fafafa;
+    --silver-500: #abacae;
+    --slate-700: #273445;
     --strawberry-300: #ed5353;
     --strawberry-500: #c6262e;
     
@@ -38,13 +41,22 @@
     color-scheme: dark;
     --background-color: var(--black-700);
     --color: #fafafa;
-    --primary: var(--blueberry-500);
+    --primary: var(--blueberry-300);
     --primary-focus: var(--blueberry-700);
-    --primary-hover: var(--blueberry-300);
+    --primary-hover: var(--blueberry-100);
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+br-space {
+    display: block;
+    margin-bottom: var(--spacing);
 }
 
 div.alert {

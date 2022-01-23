@@ -15,6 +15,7 @@
     <EmbeddedResource Include="I18n/Shared/I18n-en-GB.json" />
     <EmbeddedResource Include="I18n/Shared/I18n-fr.json" />
     <EmbeddedResource Include="I18n/Shared/I18n-pt.json" />
+    <EmbeddedResource Include="I18n/Shared/I18n-ru.json" />
     <EmbeddedResource Include="I18n/Shared/I18n.json" />
   </ItemGroup>
 

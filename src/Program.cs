@@ -11,7 +11,8 @@ var supportedCultures = new List<CultureInfo>
     new CultureInfo("en"),    // English
     new CultureInfo("en-GB"), // English (United Kingdom)
     new CultureInfo("fr"),    // French
-    new CultureInfo("pt")     // Portuguese
+    new CultureInfo("pt"),    // Portuguese
+    new CultureInfo("ru")     // Russian
 };
 
 var builder = WebApplication.CreateBuilder(args);

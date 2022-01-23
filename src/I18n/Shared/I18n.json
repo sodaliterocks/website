@@ -6,12 +6,13 @@
     "Error.ComingSoon.Title": "Coming Soon",
     "Error.NotFound.Subtitle": "Just like Jimmy Hoffa",
     "Error.NotFound.Title": "Not Found",
-    "ExplorePage.Header.Description": "Combining the power of [0] and simplicity of [1]; an OS built for developers and hobbyists, providing an insanely stable platform and a charming desktop.",
+    "ExplorePage.Header.Description": "More than just yet-another-distro; an insanely stable platform, reliable rollback-able updates, and a charming desktop. Built for developers and hobbyists, ready for anyone.",
     "ExplorePage.Header.GoInstall": "Get Started",
     "ExplorePage.Header.Tagline": "Immutable. Beautiful.",
     "ExplorePage.Title": "Explore",
     "FooterWidget.Attribution": "&copy; [0] [1] contributors",
     "InstallPage.Header.Subtitle": "Setting it up is easy. Deciding what to do with it is the hard part.",
     "InstallPage.Title": "Install",
-    "SupportPage.Title": "Support"
+    "SupportPage.Title": "Support",
+    "WallpaperPage.Text": "This wallpaper was created by <strong>[0]</strong> and is just one of the many beautiful wallpapers included with <strong>Sodalite</strong>."
 }
